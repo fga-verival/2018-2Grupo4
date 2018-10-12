@@ -1,0 +1,20 @@
+|Identificador |Descrição do Defeito|Criticidade|Proposta de reparo|Prazo sugerido para reparos|
+|:-:|:--:|:-------:|:-----:|:-----:|
+|#1-Lógico|Há uma cardinalidade sem necessidade na tabela de "VENDA"|1|Retirar a cardinalidade da tabela|5 min|
+|#2-DER|Não há a seta de direcionamento na relação "possui"|2|"Colocar a seta para a esquerda no relacionamento "possui"|10 min|
+|#3-DER|Os atributos "imposto" e "quantidade" devem ser atribuídos ao relacionamento "comercializa" e não à entidade "VENDA"|4|"Deve-se colocar os atributos "quantidade" e "imposto" no relacionamento "comercializa", adicionar na tabela "comercializa no Diagrama Lógico"|20 min|
+|#4-DER|O relacionamento entre "MEDICAMENTO" e "RECEITA" não deve existir uma vez nem todo medicamento tem uma receita, mas sim é nescessário que vendas de medicamento tenham receita.|5|"Criar um relacionamento ""possui"" de cardinalidade (1,N) entre as entidades ""VENDA"" e ""RECEITA"". Criar uma tabela para receita com a chave estrangeira de venda.|30 min|
+|#5-DER|Está faltando um identificador para a entidade "RECEITA"|5|"Adicionar uma chave primária à entidade ""RECEITA"""|30 min|
+|#6-DER|Entidade "MEDICAMENTO" não precisa de um identificador já que a a entidade especializada já tem um identificador|1|"Retirar o atributo ""id_medicamento"" da entidade ""MEDICAMENTO"""|5 min|
+|#7-DER|Está faltando o símbolo de especialização total|4|Colocar um "T" na especialização|20 min|
+|#8-DER|Nome do relacionamento entre produto e venda não está claro suficiente|1|"Trocar nome do relacionamento entre produto e venda de  comercializa para possui (com seta indicando que sai de venda e vai para produto)saindo de venda e indo para produto"|5 min|
+|#9-Lógico|Entidade "MEDICAMENTO" não precisa de um identificador já que a entidade especializada já tem um identificador"|1|"Retirar id_medicamento da entidade ""MEDICAMENTO"" e tornar o atributo codigo_controle que atualmente é apenas chave estrangeira também em chave primária da entidade ""MEDICAMENTO"". Retirar o atributo do Dicionário."|5 min|
+|#10-Lógico|Entidade "RECEITA" não se relaciona com a entidade "MEDICAMENTO" e sim com a entidade "VENDA"|5| Ligar a entidade "RECEITA" a entidade "VENDA"| 30 min|
+|#11-Lógico|Entidade que representa o relacionamento entre produto e venda não possui atributos corretos"|5|"Adicionar atriutos quantidade e imposto ao relaconamento entre as entidades "venda"" e ""produto"", além de todas chaves primárias das duas entidades como chaves estrangeiras"|30 min|
+|#12-Lógico|atributos data_emissao e data_compra estão com seus tipos errados|2|"Mudar os tipos os atributos data_emissao e data_compra de VARCHAR(10) para DATE, mudar no Dicionário de dados."|10 min|
+|#13-Dicionário|atributo cep da entidade Fabricante está com o tamanho do tipo de dado errado"|3|Trocar o tamanho de 30 para 8|15 min|
+|#14-Lógico|O atributo fragancia da entidade "PERFUMARIA" tem tamanho do tipo de dado pequeno e imcompatível com o Dicionário"|3|"Alterar no Diagrama lógico o tipo do atributo de VARCHAR(10)para VARCHAR(30)"|15 min|
+|#15-Dicionário|Está faltando o Dicionário de dados da tabela comercializa|4|"Criar o dicionário de dados da tabela comercializa, com as as chaves estrangeiras 'nmr_nota_fiscal', 'codigo_controle' e seus atributos 'quantidade' e 'imposto'"|20 min|
+|#16-Dicionário|Está faltando o Dicionário de dados da tabela comercializa|1|"Criar o dicionário de dados da tabela comercializa, com as as chaves estrangeiras 'nmr_nota_fiscal', 'codigo_controle' e seus atributos 'quantidade' e 'imposto'"|5 min|
+|#17-Dicionário|Está faltando o Dicionário de dados da tabela comercializa|1|"Criar o dicionário de dados da tabela comercializa, com as as chaves estrangeiras 'nmr_nota_fiscal', 'codigo_controle' e seus atributos 'quantidade' e 'imposto'"|10 min|
+|#18-Dicionário|Está faltando o Dicionário de dados da tabela comercializa|3|"Criar o dicionário de dados da tabela comercializa, com as as chaves estrangeiras 'nmr_nota_fiscal', 'codigo_controle' e seus atributos 'quantidade' e 'imposto'"|40 min|
